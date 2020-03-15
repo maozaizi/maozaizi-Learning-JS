@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/pure-min.css">
+    <link rel="stylesheet" href="css//layouts/side-menu.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="header">
+        <h1>校验手机号码</h1>
+    
+        <h2></h2>
+    </div>
+
+    <div class="content">
+        <h2 class="content-subhead">输入，提交，检测是否为合法手机号，然后返回结果</h2>
+
+        <form class="pure-form pure-form-stacked">
+
+            <fieldset>
+        
+                <input id="mobil" type="text" placeholder="手机号">
+        
+                <button type="submit" class="pure-button pure-button-primary" onclick="checkPhone()">校验</button>
+
+            </fieldset>
+            
+        </form>
+
+    </div>
+    <script>
+        function checkPhone(){ 
+            var phone = $(".phone").val();
+            if(!(/^1[3456789]\d{9}$/.test(phone))){ 
+                alert("手机号码不合法，请重新输入");  
+                return false; 
+            } 
+        }
+    </script>
+
+</body>
+</html>
