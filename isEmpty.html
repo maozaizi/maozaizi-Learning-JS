@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/pure-min.css">
+    <link rel="stylesheet" href="css//layouts/side-menu.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="header">
+        <h1>输入字符串并判断是否为空</h1>
+    
+        <h2></h2>
+    </div>
+
+    <div class="content">
+        <h2 class="content-subhead">输入字符串并判断是否为空</h2>
+
+        <form class="pure-form pure-form-stacked">
+
+            <fieldset>
+        
+                <input id="" type="text" placeholder="请输入">
+        
+                <button type="submit" class="pure-button pure-button-primary" onclick="String.isNullOrEmpty()">校验</button>
+
+            </fieldset>
+            
+        </form>
+
+    </div>
+    <script>
+
+        String.isNullOrEmpty = function (inputStr) {
+            return (!inputStr || inputStr == undefined || inputStr == "" || inputStr.length == 0);
+        }
+
+        if (String.isNullOrEmpty == false) {
+            alert('当前输入空');
+        } else if (String.isNullOrEmpty == true) {
+            alert(inputStr);
+        }
+
+    </script>
+
+</body>
+</html>
